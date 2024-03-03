@@ -112,11 +112,6 @@
   color: #ffffff;
 }
 
-.section-top {
-  height: 665px;
-  background-image: url(./images/foto/fonOne.png);
-  background-size: cover;
-}
 .section-top .menu {
   height: 51px;
   display: flex;
@@ -135,35 +130,44 @@
   text-transform: uppercase;
   color: #222222;
 }
-.section-top .brand-title {
+.section-top .view-product {
   display: flex;
-  margin-left: 230px;
-  margin-top: 276px;
-  padding-left: 12px;
-  border-left: 12px solid #f16d7f;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 230px;
+  height: 148px;
+  background-color: #f8f3f4;
 }
-.section-top .brand-title__text {
-  font-size: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-.section-top .brand-title__text h1 {
+.section-top .view-product .chapter-name {
   font-family: Lato, sans-serif;
-  font-size: 60px;
-  line-height: 0.7;
+  font-size: 24px;
+  line-height: 20px;
   font-weight: 900;
   letter-spacing: 0.025em;
-  color: #222222;
+  text-transform: uppercase;
+  color: #f16d7f;
 }
-.section-top .brand-title__text h3 {
+.section-top .view-product .navigation-path a {
+  text-decoration: none;
+}
+.section-top .view-product .navigation-path a .link-of-nav {
   font-family: Lato, sans-serif;
-  font-size: 40px;
-  line-height: 0.7;
-  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
   letter-spacing: 0.025em;
+  text-transform: uppercase;
+  color: #636363;
 }
-.section-top .brand-title__text h3 span {
+.section-top .view-product .navigation-path a .link-of-nav:hover {
+  font-size: 15px;
+}
+.section-top .view-product .navigation-path a .last {
+  font-family: Lato, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: 0.025em;
   color: #f16d7f;
 }
 

@@ -1,7 +1,4 @@
 .section-top {
-  height: 665px;
-  background-image: url(./images/foto/fonOne.png);
-  background-size: cover;
   .menu {
     height: 51px;
     display: flex;
@@ -17,25 +14,32 @@
       color: $colorContentOne;
     }
   }
-  .brand-title {
+  .view-product {
     display: flex;
-    margin-left: 230px;
-    margin-top: 276px;
-    padding-left: 12px;
-    border-left: 12px solid $colorContentTwo;
-    &__text {
-      font-size: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      h1 {
-        @include fontSource(60px, 0.7, 900, 0.025em);
-        color: $colorContentOne;
-      }
-      h3 {
-        @include fontSource(40px, 0.7, 900, 0.025em);
-        span {
-          color: $colorContentTwo;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 230px;
+    height: 148px;
+    background-color: #f8f3f4;
+    .chapter-name {
+      @include fontSource(24px, 20px, 900, 0.025em);
+      text-transform: uppercase;
+      color: #f16d7f;
+    }
+    .navigation-path {
+      a {
+        text-decoration: none;
+        .link-of-nav {
+          @include fontSource(14px, 20px, 300, 0.025em);
+          text-transform: uppercase;
+          color: #636363;
+          &:hover {
+            font-size: 15px;
+          }
+        }
+        .last {
+          @include fontSource(14px, 20px, 700, 0.025em);
+          color: #f16d7f;
         }
       }
     }
