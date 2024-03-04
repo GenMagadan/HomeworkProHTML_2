@@ -158,9 +158,10 @@
   letter-spacing: 0.025em;
   text-transform: uppercase;
   color: #636363;
+  transition: 0.3s;
 }
 .section-top .view-product .navigation-path a .link-of-nav:hover {
-  font-size: 15px;
+  font-size: 16px;
 }
 .section-top .view-product .navigation-path a .last {
   font-family: Lato, sans-serif;
