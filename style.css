@@ -86,6 +86,9 @@
   border: 1px solid #e6e6e6;
   border-radius: 0px 3px 3px 0px;
 }
+.header__left__search .magnifying:hover {
+  cursor: pointer;
+}
 .header__right {
   display: flex;
   justify-content: center;
@@ -110,6 +113,15 @@
   font-weight: 400;
   letter-spacing: 0.025em;
   color: #ffffff;
+}
+.header__right .my-account:hover {
+  background-color: #ffffff;
+  color: #f16d7f;
+  box-shadow: 0px 0px 3px #f16d7f;
+  cursor: pointer;
+}
+.header__right .my-account:hover img {
+  filter: brightness(0) saturate(100%) invert(80%) sepia(0%) saturate(2830%) hue-rotate(52deg) brightness(104%) contrast(59%);
 }
 
 .section-top .menu {
@@ -161,7 +173,7 @@
   transition: 0.3s;
 }
 .section-top .view-product .navigation-path a .link-of-nav:hover {
-  font-size: 16px;
+  color: #f16d7f;
 }
 .section-top .view-product .navigation-path a .last {
   font-family: Lato, sans-serif;
@@ -493,8 +505,10 @@ body {
 .section-center .offers-product__foto {
   display: flex;
   gap: 32px;
+  flex-wrap: wrap;
 }
 .section-center .offers-product__foto__variants {
+  position: relative;
   width: 261px;
   height: 364px;
   background-color: #ffffff;
@@ -502,7 +516,13 @@ body {
   gap: 17px;
   flex-direction: column;
 }
-.section-center .offers-product__foto__variants .box-foto {
+.section-center .offers-product__foto__variants .card-link {
+  height: 100%;
+  width: 261px;
+  display: block;
+  text-decoration: none;
+}
+.section-center .offers-product__foto__variants .card-link .box-foto {
   width: 261px;
   height: 280px;
   background-color: #efefef;
@@ -510,7 +530,13 @@ body {
   justify-content: center;
   align-items: center;
 }
-.section-center .offers-product__foto__variants .variant-name {
+.section-center .offers-product__foto__variants .card-link .card-text {
+  padding: 14px 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+.section-center .offers-product__foto__variants .card-link .card-text .variant-name {
   font-family: Lato, sans-serif;
   font-size: 14px;
   line-height: 1.2;
@@ -518,9 +544,8 @@ body {
   letter-spacing: 0.025em;
   text-transform: uppercase;
   color: #6f6e6e;
-  padding-left: 14px;
 }
-.section-center .offers-product__foto__variants .variant-price {
+.section-center .offers-product__foto__variants .card-link .card-text .variant-price {
   font-family: Lato, sans-serif;
   font-size: 16px;
   line-height: 1.2;
@@ -528,10 +553,41 @@ body {
   letter-spacing: 0.025em;
   text-transform: uppercase;
   color: #f16d7f;
-  padding-left: 14px;
+}
+.section-center .offers-product__foto__variants .add-box {
+  position: absolute;
+  top: 98px;
+  display: none;
+  justify-content: center;
+  width: 100%;
+  pointer-events: none;
+}
+.section-center .offers-product__foto__variants .add-box .add {
+  display: flex;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 10px;
+  align-items: center;
+  pointer-events: all;
+}
+.section-center .offers-product__foto__variants .add-box .add .add-txt {
+  font-family: Lato;
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #ffffff;
+}
+.section-center .offers-product__foto__variants .add-box .add .add:hover {
+  box-shadow: 0 0 10px 0 #fff;
 }
 .section-center .offers-product__foto__variants:hover {
   box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15);
+}
+.section-center .offers-product__foto__variants:hover .box-foto {
+  filter: brightness(30%);
+}
+.section-center .offers-product__foto__variants:hover .add-box {
+  display: flex;
 }
 
 .choice-options {

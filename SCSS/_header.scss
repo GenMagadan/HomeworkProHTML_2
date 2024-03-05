@@ -65,6 +65,9 @@
         @include centerFlex;
         border: 1px solid $colorFonThree;
         border-radius: 0px 3px 3px 0px;
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
   }
@@ -84,6 +87,17 @@
       gap: 8px;
       @include fontSource(15px, 32px, 400, 0.025em);
       color: $colorContentThree;
+      &:hover {
+        background-color: #ffffff;
+        color: $colorContentTwo;
+        box-shadow: 0px 0px 3px $colorContentTwo;
+        cursor: pointer;
+      }
+      &:hover img {
+        filter: brightness(0) saturate(100%) invert(80%) sepia(0%)
+          saturate(2830%) hue-rotate(52deg) brightness(104%)
+          contrast(59%);
+      }
     }
   }
 }

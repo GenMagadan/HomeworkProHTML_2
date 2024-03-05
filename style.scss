@@ -1,11 +1,11 @@
-@import 'mixins';
-@import 'colors';
-@import 'fonts';
-@import 'header';
-@import 'section-top';
-@import 'sectionSubscribe';
-@import 'section-info';
-@import 'footer';
+@import 'SCSS/mixins';
+@import 'SCSS/colors';
+@import 'SCSS/fonts';
+@import 'SCSS/header';
+@import 'SCSS/section-top';
+@import 'SCSS/sectionSubscribe';
+@import 'SCSS/section-info';
+@import 'SCSS/footer';
 
 * {
   margin: 0;
@@ -60,38 +60,83 @@ body {
     &__foto {
       display: flex;
       gap: 32px;
+      flex-wrap: wrap;
       &__variants {
+        position: relative;
         width: 261px;
         height: 364px;
         background-color: #ffffff;
         display: flex;
         gap: 17px;
         flex-direction: column;
-        .box-foto {
+        .card-link {
+          height: 100%;
           width: 261px;
-          height: 280px;
-          background-color: #efefef;
-          @include centerFlex;
+          display: block;
+          text-decoration: none;
+          .box-foto {
+            width: 261px;
+            height: 280px;
+            background-color: #efefef;
+            @include centerFlex;
+          }
+          .card-text {
+            padding: 14px 17px;
+            display: flex;
+            flex-direction: column;
+            gap: 17px;
+            .variant-name {
+              @include fontSource(14px, 1.2, 600, 0.025em);
+              text-transform: uppercase;
+              color: #6f6e6e;
+            }
+            .variant-price {
+              @include fontSource(16px, 1.2, 700, 0.025em);
+              text-transform: uppercase;
+              color: $colorContentTwo;
+            }
+          }
         }
-        .variant-name {
-          @include fontSource(14px, 1.2, 600, 0.025em);
-          text-transform: uppercase;
-          color: #6f6e6e;
-          padding-left: 14px;
-        }
-        .variant-price {
-          @include fontSource(16px, 1.2, 700, 0.025em);
-          text-transform: uppercase;
-          color: $colorContentTwo;
-          padding-left: 14px;
+        .add-box {
+          position: absolute;
+          top: 98px;
+          display: none;
+          justify-content: center;
+          width: 100%;
+          pointer-events: none;
+          .add {
+            display: flex;
+            text-decoration: none;
+            border: 1px solid #fff;
+            padding: 10px;
+            align-items: center;
+            pointer-events: all;
+            .add-txt {
+              font-family: Lato;
+              font-size: 13px;
+              line-height: 1.2;
+              font-weight: 700;
+              color: #ffffff;
+            }
+            .add:hover {
+              box-shadow: 0 0 10px 0 #fff;
+            }
+          }
         }
         &:hover {
           box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15);
+        }
+        &:hover .box-foto {
+          filter: brightness(30%);
+        }
+        &:hover .add-box {
+          display: flex;
         }
       }
     }
   }
 }
+
 .choice-options {
   position: absolute;
   top: 691px;
@@ -181,7 +226,6 @@ body {
           border: 1px solid #eaeaea;
         }
       }
-
       .select1:focus,
       .select2:focus,
       input:focus {
